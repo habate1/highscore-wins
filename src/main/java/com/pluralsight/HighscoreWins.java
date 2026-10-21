@@ -18,6 +18,13 @@ public class HighscoreWins {
         String team1 = linePieces[0], team2 = linePieces[1];
         int score1 = Integer.parseInt(linePieces[2]), score2 = Integer.parseInt(linePieces[3]);
 
-        System.out.println(team1 + team2 + score1 + score2);
+        // determine which team won by comparing the two scores
+        if (score1 > score2) {
+            System.out.println("Winner: " + team1);
+        } else if (score2 > score1) {
+            System.out.println("Winner: " + team2);
+        } else {
+            System.out.println("Both teams are tied.");
+        }
     }
 }
